@@ -1,27 +1,29 @@
-<!DOCTYPE html>
-<html
-  class=""
-  lang="{{ .Site.LanguageCode }}"
-  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
->
-  <head>
-    <meta charset="utf-8" />
-
-    {{ partial "meta.html" . }}
-
-    <title>{{ .Title }}</title>
-    <link rel="canonical" href="{{ .Permalink }}" />
-{{ $title := .Title }}
-{{ with .OutputFormats.Get "RSS" }}
-    <link
-      href="{{ .RelPermalink }}"
-      rel="alternate"
-      type="application/rss+xml"
-      title="{{ $title }}"
-    />
-{{ end }}
-    {{ partial "head_includes.html" . }}
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  </head>
-
+<div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">{{ .Site.Title }}</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/" title="home">{{ .Site.Title }}</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       {{ $currentPage := . }}
+       {{ range .Site.Menus.main }}
+    <li><a href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>{{ .Name }}</a></li>
+    {{end}}
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+        {{ range .Site.Menus.extra }} 
+          <li>
+            <a href="{{ .Permalink }}">{{ .Name }}</a>
+          </li>
+        {{ end }}  
+      </ul>
+    </nav>
+  </div>

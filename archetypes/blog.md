@@ -1,8 +1,7 @@
 +++
 title = ""
 description = ""
-tags = ["development"]
-categories = ["Development"]
-# series = []
 date = {{ .Date }}
+weight = 20
+draft = false
 +++

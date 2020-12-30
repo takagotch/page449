@@ -1,10 +1,20 @@
-<footer>
-    <div>
-      <p class="f6 gray mt6 lh-copy">
-        {{ .Site.Copyright  | safeHTML }}
-      </p>
-    </div>
+  <footer id="footer">
+    <nav>
+      <ul>
+        <li><span>Kube</span></li>
+        <li>
+          <a href="/company/">Company</a>
+        </li>
+        <li>
+          <a href="/blog/">Blog</a>
+        </li>
+          <li>
+          <a href="/docs/">Docs</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/{{.Site.Params.twitter}}">Give a shout-out on Twitter!</a>
+        </li>
+      </ul>
+    </nav>
+    <p>&copy; Licence MIT.</p>
   </footer>
-  
-  {{ partial "scripts.html" . }}
-

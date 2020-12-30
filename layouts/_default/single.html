@@ -1,26 +1,18 @@
-{{ partial "header.html" . }}
-<body
-  lang="{{ .Site.LanguageCode }}"
-  class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns"
-  itemscope
-  itemtype="http://schema.org/Article"
->
-  {{ $baseurl := .Site.BaseURL }}
-  <span class="b">/ </span>
-  <a
-    href="{{ .Site.BaseURL  }}"
-    class="b bb bw1 pb1 no-underline black"
-    >{{ .Site.Title }}</a
-  >
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
 
-  <section id="main" class="mt5">
-    <h1 itemprop="name" id="title">{{ .Title }}</h1>
+{{ define "main" }}
 
-    <article itemprop="articleBody" id="content" class="w-90 lh-copy">
-      {{ .Content }}
-    </article>
-  </section>
+<div id="hero" class="wrap">
+  <h1>{{.Title }}</h1>
+    <p>{{.Params.description}}</p>
+</div>
+<ul id="posts">
 
-  {{ partial "footer.html" . }}
-  </body>
-</html>
+ {{ .Content }}
+  
+</ul>
+{{ end }} 
+{{ define "footer" }} 
+  {{ partial "footer" . }} 
+{{ end }}
