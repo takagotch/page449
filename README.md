@@ -1,3 +1,7 @@
+### https://takagotch.github.io/page449/
+---
+
+
 # kube Theme for Hugo
 
 `kube` Kube is a professional  and a responsive Hugo theme for developers and designers that offers a documentation section mixed with a landing page and a blog.
