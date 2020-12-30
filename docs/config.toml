@@ -8,6 +8,9 @@ disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 
+
+
+
 # setting for GitHub Pages
 publishDir = "docs"
 
