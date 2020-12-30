@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://takagotch.github.io/page449/"
 languageCode = "en-us"
 title = "Kube for Hugo"
 theme = "kube"
